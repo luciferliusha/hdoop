@@ -10,6 +10,15 @@ import java.io.IOException;
 public class MaxTemperatureMapper
         extends Mapper<LongWritable, Text, Text, IntWritable> {
     private static final int MISSING = 9999;
+
+    /**
+     *
+     * @param key
+     * @param value
+     * @param context
+     * @throws IOException
+     * @throws InterruptedException
+     */
     @Override
     public void map(LongWritable key, Text value, Context context)
             throws IOException, InterruptedException {
